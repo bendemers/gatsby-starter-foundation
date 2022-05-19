@@ -18,5 +18,5 @@ seasonNotes: |-
 
   1. Hello test
 yearbookImage: /assets/demo.png
-races: /assets/demo.png
+races: ""
 ---

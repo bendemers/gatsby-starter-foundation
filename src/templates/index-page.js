@@ -207,14 +207,11 @@ const HomePage = ({ data }) => {
       <div className="home-banner grids col-1 sm-2">
         <div>
           <h1 className="title">{frontmatter.title}</h1>
-          <p
+          <h3
             className="tagline"
-            sx={{
-              color: "muted",
-            }}
           >
             {frontmatter.tagline}
-          </p>
+          </h3>
           <div
             className="description"
             dangerouslySetInnerHTML={{ __html: html }}
@@ -252,7 +249,7 @@ const HomePage = ({ data }) => {
           )}
         </div>
       </div>
-      <BlogListHome data={posts} />
+      {/* <BlogListHome data={posts} /> */}
     </Layout>
   )
 }

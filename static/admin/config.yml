@@ -227,3 +227,63 @@ collections:
             widget: "color"
             enableAlpha: true
             allowInput: true
+  - name: "seasons" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Seasons" # Used in the UI
+    label_singular: "Season" # Used in the UI, ie: "New Post"
+    description: >
+      Create new season records here.
+    folder: "src/content/seasons"
+    create: true # Allow users to create new documents in this collection
+    slug: "{{fields.year}} Season" 
+    summary: "{{fields.year}} Season"
+    fields: # The fields each document in this collection have
+      - {
+          label: "Year",
+          name: "year",
+          widget: "datetime",
+          dateFormat: "YYYY",
+          format: " YYYY",
+        }
+      - { label: "Coach", name: "coach", widget: "string" }
+      - { label: "Wins", name: "wins", widget: "number", 
+          default:  0, min: 0, value_type: "int" }
+      - { label: "Losses", name: "losses", widget: "number", 
+          default:  0, min: 0, value_type: "int" }
+      - { label: "Ties", name: "ties", widget: "number", 
+          default:  0, min: 0, value_type: "int" }  
+      - { label: "Team Award", name: "teamAward", widget: "string" }
+      - { label: "Coaches Award", name: "coachesAward", widget: "string" }
+      - { label: "Regular Season Placement", name: "regularSeason", widget: "string" }
+      - { label: "League Meet Placement", name: "leagueMeet", widget: "string" }
+      - {
+        label: "Captians",
+        name: "captians",
+        widget: "list",
+        summary: '{{fields.name}}',
+        field: {label: "Name", name: "name", widget: "string"}
+        }
+      - {
+        label: "Roster",
+        name: "roster",
+        widget: "text",
+        }
+      - {
+        label: "Season Notes",
+        name: "seasonNotes",
+        widget: "markdown",
+        required: false,
+       }
+      - {
+        label: "Yearbook Image",
+        name: "yearbookImage",
+        widget: "image",
+        required: false,
+        tagname: "",
+        }
+      - {
+        label: 'Races', 
+        name: 'races', 
+        widget: 'file',
+        required: false,
+        hint: 'Upload PDF of the races for the season.'
+        }

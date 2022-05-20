@@ -1,8 +1,8 @@
 ---
 template: index-page
 slug: /
-title: Masconomet Cross Country
-tagline: Digital History
+title: Masconomet Cross Country Digital History
+tagline: t
 featuredImage: /assets/1971yearbookpage.jpg
 cta:
   ctaText: Explore the history of the team!
